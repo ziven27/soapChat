@@ -1,0 +1,60 @@
+<template name="userSoaps">
+	<h2 class="h_2">捡一块肥皂</h2>
+	<p class="o_tac">如果下面没有出现图片请耐心等待...</p>
+	<ul class="l_1 c_b">
+		{{#each soaps}}
+	      {{> userSoap}}
+	    {{/each}}
+	</ul>
+</template>
+
+<template name="userSoap">
+	<li class="c_s o_s41">
+		<div class="b_1 o_pr o_tac">
+			<img class="o_db o_auto" width="100" height="100" src="{{imgUrl}}" alt="{{name}}">
+			<h4>《{{name}}》</h4>
+		</div>
+	</li>
+</template>
+
+<template name="userRoles">
+	<h2 class="h_2">选一个角色</h2>
+	<div class="l_2 o_tac o_fs0">
+		{{#each roles}}
+	      {{> userRole}}
+	    {{/each}}
+	</div>
+</template>
+
+<template name="userRole">
+	<a href="javascript:;" title="{{name}}" class="o_dib o_fs14">
+		<img class="o_db o_br5" width="40" height="40" src="{{imgUrl}}" alt="{{name}}"> <strong class="o_db">{{name}}</strong>
+	</a>
+</template>
+
+<template name="chatForm">
+	<form id="chatForm" class="f_1">
+		<div class="f1_in o_cf">
+			<button class="o_fr" type="submit">发送</button>
+			<div class="f1_fc1 o_cell">
+				<input type="text" name="msg" maxlength="40" placeholder="只能输入40个字" require></div>
+		</div>
+	</form>
+</template>
+
+<template name="chatBox">
+	<ul class="l_3">
+		{{#each chats}}
+	      {{> chat}}
+	    {{/each}}
+	</ul>
+</template>
+
+<template name="chat">
+	<li class="o_pr o_cf{{#if self}} {{self}}{{/if}}">
+		<img class="l3_hd o_pa" width="40" height="30" src="{{imgUrl}}" alt="{{name}}">
+		<div class="l3_bd o_fr">
+			<p>{{info}}</p>
+		</div>
+	</li>
+</template>
