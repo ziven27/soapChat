@@ -1,0 +1,33 @@
+<template name="addSoap">
+	{{ > addSoapForm}}
+	{{ > addSoapList}}	
+</template>
+
+<template name="addSoapForm">
+	<form id="addSoap" class="cf f2_addSope f_2">
+		<input class="m_fc" type="text" name="soapName" placeholder="肥皂名" required="required"/>
+		<input class="m_fc" type="text" name="imgUrl" placeholder="图片路径" required="required"/>
+		<textarea class="m_fc" name="info" id="" rows="5" placeholder="描述"></textarea>
+		<button type="submit" name="" class="bt bt_1 bt_block">添加肥皂</button>
+	</form>
+</template>
+
+<template name="addSoapList">
+	<ul class="l_6 l6_soaps">
+		{{#each soaps}}
+	      {{> addSoapItem}}
+	    {{/each}}
+	</ul>
+</template>
+
+<template name="addSoapItem">
+	<li>
+		<a href="/addrole/_id:{{_id}}"  class="l6_i" >
+			<img src="{{imgUrl}}" width="230" height="150" alt="{{name}}">
+			<strong>{{name}}</strong>
+			<i></i>
+		</a>
+	</li>
+</template>
+
+

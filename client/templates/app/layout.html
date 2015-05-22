@@ -1,0 +1,36 @@
+<template name="layout">
+	<div class="page">
+		<div class="page_in">
+			<div class="page_hd pr hd_1">
+				<h1 class="fl hd1_h1">{{> yield "title"}}</h1>
+				<p class="fl">{{> yield "intro"}}</p>
+			</div>
+			<div class="page_bd">	
+				{{> yield}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="layoutAdmin">
+	<div class="page">
+		<div class="page_in">
+			<div class="page_hd pr hd_1">
+				<h1 class="fl hd1_h1">肥皂剧管理</h1>
+				<p class="fl">添加你的电视剧，和角色</p>
+			</div>
+			<div class="page_bd">	
+				{{> yield}}
+			</div>
+		</div>
+	</div>
+</template>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<template name="addRole">
+	{{ > addRoleList}}	
+	{{ > addRoleForm}}
+</template>
+
+<template name="addRoleForm">
+	<form id="addRole" class="cf f2_addRole f_2">
+		<input class="m_fc" type="text" name="roleName" placeholder="角色名" required="required"/>
+		<textarea class="m_fc" name="intro" id="" rows="5" placeholder="描述"></textarea>
+		<label class="fc_file"><input type="file" name="img" /></label>
+		<button type="submit" name="" class="bt bt_1 bt_block">添加角色</button>
+	</form>
+</template>
+
+<template name="addRoleList">
+	<ul class="l_6 l6_roles">
+		{{> addRoleItem}}
+	</ul>
+</template>
+
+<template name="addRoleItem">
+	<li>
+		<a href="javascrip:;" class="l6_i">
+			<img src="img/roles/hzgg/cover.jpg" width="230" height="150" alt="hzgg">
+			<strong>还珠格格</strong>
+		</a>
+	</li>
+	<li>
+		<a href="javascrip:;" class="l6_i">
+			<img src="img/roles/xbnzcq/cover.jpg" width="230" height="150" alt="xbnzcq">
+			<strong>新白娘子传奇</strong>
+		</a>
+	</li>
+</template>
+
+
